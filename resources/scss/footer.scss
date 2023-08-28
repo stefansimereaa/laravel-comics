@@ -1,0 +1,66 @@
+@use "vars" as *;
+#jumbo {
+    background-image: url("../img/dc-logo-bg.png"), url("../img/footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 40%, cover;
+    background-position: 80%, center;
+    padding: 4rem 0;
+    .lists {
+        display: flex;
+        align-items: start;
+    }
+
+    .list {
+        min-width: 155px;
+        margin-right: 1.5rem;
+    }
+
+    h4 {
+        font-family: $secondary_font;
+        color: white;
+        margin-top: 1rem;
+        font-weight: 900;
+        font-size: 1.8rem;
+    }
+
+    a {
+        color: gray;
+    }
+}
+
+.footer-bottom {
+    background-color: $gray;
+    padding: 2rem 0;
+    .flex-cont {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+
+        .follow-us {
+            color: $dc-blue;
+            font-weight: 900;
+        }
+
+        .icons {
+            display: flex;
+
+            img {
+                margin-left: 1.5rem;
+            }
+        }
+    }
+}
+
+.signup-button {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-weight: 900;
+    border: 2px solid $dc-blue;
+    cursor: pointer;
+}

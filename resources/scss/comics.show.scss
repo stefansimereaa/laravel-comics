@@ -1,0 +1,167 @@
+@use "vars" as *;
+
+$title-color: #003f5e;
+
+h1,
+h2,
+h3,
+h4 {
+    color: $title-color;
+}
+
+h4 {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+#comic-details {
+    position: relative;
+
+    .comic-cover {
+        position: absolute;
+        width: 175px;
+        height: 275px;
+        top: -225px;
+        border: 2px solid white;
+        background-color: #fff;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-link {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            background-color: #00a9d9;
+            font-size: 0.75rem;
+        }
+    }
+
+    .blue-stripe {
+        background-color: #0282f9;
+        height: 75px;
+        .nav-links {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 0.33rem;
+
+            font-weight: bold;
+            color: white;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+    .wrapper {
+        margin: 4rem 0;
+        display: flex;
+        gap: 4rem;
+
+        .comic-details {
+            flex-grow: 1;
+        }
+    }
+    h1 {
+        font-weight: bold;
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .price-and-avail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #55ba59;
+        border-bottom: 1px solid black;
+        margin-bottom: 1rem;
+        color: #90ed8b;
+
+        .left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+            padding: 0 1.5rem;
+
+            font-weight: bold;
+
+            .price {
+                color: white;
+            }
+        }
+
+        .right {
+            padding: 1rem 1.5rem;
+            border-left: 1px solid black;
+            font-weight: bold;
+            color: white;
+        }
+    }
+
+    .description {
+        color: #333;
+        line-height: 1.75;
+    }
+
+    figcaption {
+        color: #333;
+        font-weight: bold;
+        text-align: right;
+    }
+}
+
+#talent-and-specs {
+    background-color: #f6f6f6;
+    padding-top: 1.5rem;
+    padding-bottom: 7rem;
+
+    .container {
+        display: flex;
+        gap: 3rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .talent {
+        flex: 0 0 50%;
+    }
+
+    .specs {
+        flex: 0 0 50%;
+    }
+
+    .row {
+        display: flex;
+        border-top: 1px solid #ccc;
+        padding: 0.5rem 0;
+        font-size: 0.85rem;
+
+        &:last-child {
+            margin-bottom: 1px solid #ccc;
+        }
+
+        *:first-child {
+            flex: 0 0 200px;
+        }
+
+        a {
+            color: #0d6efd;
+        }
+    }
+}

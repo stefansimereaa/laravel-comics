@@ -1,0 +1,38 @@
+@use "resets";
+@use "header";
+@use "footer";
+
+@use "vars" as *;
+
+// Generals
+
+body {
+    font-family: $main_font;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+// Utilities
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+//jumbotron
+#jumbotron {
+    height: 400px;
+    overflow: hidden;
+}

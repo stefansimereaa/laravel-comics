@@ -1,0 +1,55 @@
+@use "vars" as *;
+
+header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    box-shadow: 0 0 15px #666;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    //logo
+    figure {
+        margin: 0.5rem 0;
+    }
+}
+
+nav {
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $secondary_font;
+            font-weight: 700;
+            color: $gray;
+            padding: 0 0.5rem;
+            text-transform: uppercase;
+        }
+
+        li,
+        a {
+            height: 100%;
+        }
+
+        li {
+            padding: 0 0.25rem;
+        }
+
+        .active {
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid $dc_blue;
+        }
+    }
+}
