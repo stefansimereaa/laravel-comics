@@ -4,7 +4,7 @@
 
 @use "vars" as *;
 
-// Generals
+// General Css
 
 body {
     font-family: $main_font;
@@ -23,7 +23,7 @@ img {
     display: block;
 }
 
-// Utilities
+// Utils
 
 .container {
     max-width: 1200px;
@@ -31,7 +31,7 @@ img {
     min-height: 100%;
 }
 
-//jumbotron
+//Jumbo
 #jumbotron {
     height: 400px;
     overflow: hidden;
