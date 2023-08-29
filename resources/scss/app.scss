@@ -4,7 +4,7 @@
 
 @use "vars" as *;
 
-// General Css
+// Generals
 
 body {
     font-family: $main_font;
@@ -23,7 +23,7 @@ img {
     display: block;
 }
 
-// Utils
+// Utilities
 
 .container {
     max-width: 1200px;
@@ -31,8 +31,24 @@ img {
     min-height: 100%;
 }
 
-//Jumbo
+//jumbotron
 #jumbotron {
     height: 400px;
     overflow: hidden;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.button {
+    text-align: center;
+    background-color: $dc-blue;
+    padding: 0.75rem 5rem;
+    font-family: $secondary-font;
+    font-weight: 900;
+    color: white;
+    cursor: pointer;
 }

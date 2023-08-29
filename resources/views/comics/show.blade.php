@@ -25,7 +25,7 @@
                     <h1 class="uppercase">{{ $comic['title'] }}</h1>
                     <div class="price-and-avail">
                         <div class="left">
-                            <div>U.S Price: <span class="price">{{ $comic['price'] }}</span></div>
+                            <div>U.S Price: <span class="price">{{ $comic->signedPrice }}</span></div>
                             <div class="availability">AVAILABLE</div>
                         </div>
                         <div class="right">
@@ -40,6 +40,12 @@
                     <img src="{{ Vite::asset('resources/img/test.jpg') }}" alt="advertisement">
                 </figure>
             </div>
+
+
+            <div class="button-container mb-3 d-flex justify-content-end ">
+                <a href="{{ route('comics.edit', $comic) }}" class="button">EDIT COMIC</a>
+            </div>
+
         </div>
     </section>
 
@@ -51,7 +57,7 @@
                 <div class="row">
                     <h4>Art by:</h4>
                     <div class="artists list">
-                        @foreach ($comic['artists'] as $artist)
+                        @foreach ($comic->artistsArray as $artist)
                             <a href="#">{{ $artist }}</a>
                             @unless ($loop->last)
                                 ,
@@ -62,7 +68,7 @@
                 <div class="row">
                     <h4>Written by:</h4>
                     <div class="writers list">
-                        @foreach ($comic['writers'] as $writer)
+                        @foreach ($comic->writersArray as $writer)
                             <a href="#">{{ $writer }}</a>
                             @unless ($loop->last)
                                 ,
@@ -79,7 +85,7 @@
                 </div>
                 <div class="row">
                     <h4>U.S. Price:</h4>
-                    <div>{{ $comic['price'] }}</div>
+                    <div>{{ $comic->signedPrice }}</div>
                 </div>
                 <div class="row">
                     <h4>On Sale Date:</h4>

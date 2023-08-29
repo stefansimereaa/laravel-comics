@@ -14,17 +14,16 @@
         title: '{{ old('title', $comic->title) }}',
         thumbnail: '{{ old('thumbnail', $comic->thumb) }}'
     }">
-        <div class="container">
-            <div class="d-flex justify-content-center align-items-center my-5 gap-4">
-                <img class="img-fluid" style="height: 150px" :src="thumbnail" :alt="title">
-                <h1 class="text-center fw-bold  my-5">Add a new comic</h1>
-            </div>
-            <hr class="my-2">
 
-            <form method="POST" action="{{ route('comics.store') }}" id="comic-form" novalidate>
-                @include('comics.form')
-            </form>
-
+        <div class="container my-5 d-flex align-items-center justify-content-center gap-4">
+            <img class="img-fluid" style="height: 150px" :src="thumbnail" :alt="title">
+            <h1 x-text="title" class="text-center">EDIT {{ $comic->title }}</h1>
         </div>
+
+
+        <form method="POST" action="{{ route('comics.update', $comic) }}" id="comic-form" novalidate>
+            @method('put')
+            @include('comics.form')
+        </form>
     </div>
 @endsection
