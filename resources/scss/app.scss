@@ -1,6 +1,7 @@
 @use "resets";
 @use "header";
 @use "footer";
+@use "flash-message.scss";
 
 @use "vars" as *;
 
@@ -21,6 +22,16 @@ a {
 
 img {
     display: block;
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 
 // Utilities

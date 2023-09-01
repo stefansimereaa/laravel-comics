@@ -22,7 +22,7 @@
         <div class="container">
             <div class="wrapper">
                 <div class="comic-details">
-                    <h1 class="uppercase">{{ $comic['title'] }}</h1>
+                    <h1 id="comic-title" class="uppercase">{{ $comic->title }}</h1>
                     <div class="price-and-avail">
                         <div class="left">
                             <div>U.S Price: <span class="price">{{ $comic->signedPrice }}</span></div>
@@ -42,8 +42,13 @@
             </div>
 
 
-            <div class="button-container mb-3 d-flex justify-content-end ">
+            <div class="button-container">
                 <a href="{{ route('comics.edit', $comic) }}" class="button">EDIT COMIC</a>
+                <form action="{{ route('comics.destroy', $comic) }}" method="POST" id="delete-form">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="button delete-btn">DELETE COMIC</button>
+                </form>
             </div>
 
         </div>
@@ -94,4 +99,9 @@
             </div>
         </div>
     </section>
+@endsection
+
+
+@section('scripts')
+    @vite('resources/js/confirm-delete.js')
 @endsection

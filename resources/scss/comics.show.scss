@@ -165,3 +165,13 @@ h4 {
         }
     }
 }
+
+.button-container {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+
+    .delete-btn {
+        background-color: red;
+    }
+}

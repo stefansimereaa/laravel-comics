@@ -1,0 +1,22 @@
+$light-green: #d1e7dd;
+$dark-green: #0a3622;
+
+#flash-message {
+    position: fixed;
+
+    left: 350px;
+    right: 350px;
+    top: 150px;
+
+    z-index: 2;
+
+    background-color: $light-green;
+    color: $dark-green;
+    border: 1px solid $dark-green;
+    box-shadow: 0 0 5px $dark-green;
+    font-weight: bolder;
+    font-size: 1rem;
+    border-radius: 1rem;
+
+    padding: 1.25rem;
+}

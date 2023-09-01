@@ -12,7 +12,9 @@ class Comic extends Model
 
     protected $fillable = ['title', 'description', 'thumb', 'price', 'series', 'sale_date', 'type', 'artists', 'writers'];
 
-
+    /**
+     * Puts a $ in front of the price
+     */
     protected function signedPrice(): Attribute
     {
         return Attribute::make(
@@ -20,7 +22,9 @@ class Comic extends Model
         );
     }
 
-
+    /** 
+     * Removes $ in front of the price, since in the seeder the price comes with the $ in front
+     */
     protected function price(): Attribute
     {
         return Attribute::make(
@@ -28,7 +32,9 @@ class Comic extends Model
         );
     }
 
-
+    /**
+     * Transform the comma separated string of artists in an array
+     */
     protected function artistsArray(): Attribute
     {
         return Attribute::make(
@@ -36,7 +42,10 @@ class Comic extends Model
         );
     }
 
-
+    /**
+     * Transform the comma separated string of writers in an array
+     * 
+     */
     protected function writersArray(): Attribute
     {
         return Attribute::make(
