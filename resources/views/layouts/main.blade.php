@@ -15,7 +15,6 @@
 
     @yield('scss')
 
-    {{-- To hide html before scss gets compiled --}}
     <style>
         body {
             display: none;

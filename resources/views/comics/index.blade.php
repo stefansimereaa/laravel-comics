@@ -5,12 +5,12 @@
 @endsection
 
 @section('main-content')
-    {{-- COMICS LIST --}}
+    {{-- Comics--}}
     <section id='comics'>
 
         <div class="container">
 
-            {{-- CURRENT SERIES BUTTON --}}
+            {{-- Current series --}}
             <div class="current-series button">CURRENT SERIES</div>
 
             <div class="flex-container">
@@ -28,7 +28,7 @@
 
             </div>
 
-            {{-- LOAD MORE BUTTON --}}
+            {{-- Load more button--}}
             <div class="button-container">
                 <div class="button">LOAD MORE</div>
                 <a href="{{ route('comics.create') }}" class="button">ADD COMIC</a>
@@ -37,7 +37,7 @@
         </div>
     </section>
 
-    {{-- SHOP ITEMS --}}
+    {{-- Shop--}}
     <section id="shop">
         <div class="container">
             <ul>
